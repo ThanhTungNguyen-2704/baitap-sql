@@ -35,13 +35,13 @@ SELECT * FROM nhan_vien ;
 SELECT ho_ten , luong FROM nhan_vien ;
 
 -- Cau 3: Nhan vien thuoc phong Ky thuat
-SELECT phong_ban FROM nhan_vien Where phong_ban = "Kỹ thuật" ;
+SELECT * FROM nhan_vien Where phong_ban = "Ky thuat" ;
 
 -- Cau 4: Luong tren 15tr va o Ha Noi
-SELECT * FROM nhan_vien Where luong >= 15000000 AND thanh_pho = "Hà Nội" ;
+SELECT * FROM nhan_vien Where luong >= 15000000 AND thanh_pho = "Ha Noi" ;
 
 -- Cau 5: Vao tu 2020, sap xep luong giam dan
 SELECT ho_ten, luong, phong_ban FROM nhan_vien Where nam_vao >= 2020 ORDER BY luong DESC ;
 
 -- Cau 6: Top 5 luong cao nhat
-SELECT ho_ten, luong FROM nhan_vien ORDER BY luong LIMIT 5 
+SELECT ho_ten, luong FROM nhan_vien ORDER BY luong DESC LIMIT 5 
