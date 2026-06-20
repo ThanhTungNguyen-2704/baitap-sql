@@ -35,28 +35,43 @@ INSERT INTO cuoc_goi VALUES
 (107, 7, 2, 500, 'Noi mang', '2024-05-07');
 
 -- cau 1
-SELECT * FROM khach_hang Where nha_mang = 'Viettel' ;
+SELECT * FROM khach_hang 
+Where nha_mang = 'Viettel' ;
 -- cau 2
-SELECT * FROM khach_hang Where tuoi > 30 ;
+SELECT * FROM khach_hang 
+Where tuoi > 30 ;
 -- cau 3
-SELECT * FROM khach_hang Where tinh_thanh = 'Ha Noi' AND nha_mang ='Viettel' ;
+SELECT * FROM khach_hang 
+Where tinh_thanh = 'Ha Noi' AND nha_mang ='Viettel' ;
 -- cau 4
-SELECT * FROM khach_hang Where nha_mang ='Viettel' OR nha_mang = 'Vinaphone' ;
+SELECT * FROM khach_hang 
+Where nha_mang ='Viettel' OR nha_mang = 'Vinaphone' ;
 -- cau 5
-SELECT * FROM khach_hang Where Not loai_thue_bao = 'Tra truoc' ;
+SELECT * FROM khach_hang 
+Where Not loai_thue_bao = 'Tra truoc' ;
 -- cau 6
-SELECT * FROM khach_hang Where tuoi BETWEEN 20 AND 35 ;
+SELECT * FROM khach_hang 
+Where tuoi BETWEEN 20 AND 35 ;
 -- cau 7
-SELECT * FROM khach_hang Where tinh_thanh IN ('Ha Noi' , 'Da Nang' , 'Hai Phong') ;
+SELECT * FROM khach_hang 
+Where tinh_thanh IN ('Ha Noi' , 'Da Nang' , 'Hai Phong') ;
 -- cau 8
-SELECT * FROM khach_hang Where ho_ten LIKE 'NGUYEN' ;
+SELECT * FROM khach_hang 
+Where ho_ten LIKE 'Nguyen%' ;
 -- cau 9
-SELECT * FROM khach_hang Where tinh_thanh IS NULL ;
+SELECT * FROM khach_hang 
+Where tinh_thanh IS NULL ;
 -- cau 10 
-SELECT * FROM khach_hang ORDER BY tuoi ASC ;
+SELECT * FROM khach_hang 
+ORDER BY tuoi ASC ;
 -- cau 11
-SELECT * FROM khach_hang ORDER BY ngay_dang_ky ASC ;
+SELECT * FROM khach_hang 
+ORDER BY ngay_dang_ky DESC ;
 -- cau 12 
-SELECT * FROM khach_hang Where nha_mang = 'Viettel' AND ORDER BY tuoi DESC AND LIMIT 3 ;
+SELECT * FROM khach_hang 
+Where nha_mang = 'Viettel'  
+ORDER BY tuoi DESC  
+LIMIT 3 ;
 -- cau 14
-SELECT * FROM khach_hang Where (nha_mang = 'Viettel' AND tuoi < 25) OR (nha_mang ='Vinaphone' AND loai_thue_bao ='Tra sau') ;
+SELECT * FROM khach_hang 
+Where (nha_mang = 'Viettel' AND tuoi < 25) OR (nha_mang ='Vinaphone' AND loai_thue_bao ='Tra sau') ;
